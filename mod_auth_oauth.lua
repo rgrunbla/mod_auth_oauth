@@ -17,8 +17,6 @@ local have_async, async = pcall(require, "util.async");
 
 local http = require "util.http";
 
-local nodeprep = require "util.encodings".stringprep.nodeprep;
-
 local log = module._log;
 local host = module.host;
 
