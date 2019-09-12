@@ -1,14 +1,14 @@
 # mod_auth_oauth
 
-An authentication module for Prosody using a OAuth 2.0 backend such as Keycloak, that supports SASL OAUTHBEARER and PLAIN mechanisms.
+An authentication module for Prosody using a OAuth 2.0 backend such as Keycloak, that supports `SASL OAUTHBEARER` and `PLAIN` mechanisms.
 
-When PLAIN is used, the username and password are checked by retrieving a token using the `oauth_url_token` endpoint.
+When `PLAIN` is used, the username and password are checked by retrieving a token using the `oauth_url_token` endpoint.
 
-When OAUTHBEARER is used, the token is checked against the `oauth_url_userinfo` endpoint.
+When `OAUTHBEARER` is used, the token is checked against the `oauth_url_userinfo` endpoint.
 
-## Dependencies
+## Dependencies - Important
 
-This module depends on mod_sasl_oauthbearer.
+This module depends on `mod_sasl_oauthbearer` in which the `password = saslprep(password);` has been removed.
 
 ## Configuration
 
